@@ -7,11 +7,17 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout del código fuente
+      - name: Checkout code
         uses: actions/checkout@v2
         
-      - name: Instalar dependencias
+      - name: Install dependencias
         run: npm install
       
-      - name: Ejecutar pruebas
+      - name: Install Playwright
+        run: npx playwright install
+        
+      - name: Install Cucumber
+        run: npm install --save-dev @cucumber/cucumber
+        
+      - name: Execute tests
         run: npx cucumber-js --tags @all
