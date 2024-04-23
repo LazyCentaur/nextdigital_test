@@ -1,8 +1,17 @@
 name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+
+on:
+  push:
+  
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: npx cucumber-js --tags @all
+      - name: Checkout del código fuente
+        uses: actions/checkout@v2
+        
+      - name: Instalar dependencias
+        run: npm install
+      
+      - name: Ejecutar pruebas
+        run: npx cucumber-js --tags @all
