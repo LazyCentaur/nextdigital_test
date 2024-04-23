@@ -5,4 +5,4 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "npx cucumber-js --tags @all"
+      - run: npx cucumber-js --tags @all
