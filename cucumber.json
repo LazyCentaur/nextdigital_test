@@ -16,8 +16,8 @@
         ],
         "format": [
             "progress-bar",
-            "html:test-resutls/cucumber-report.html",
-            "json:test-resutls/cucumber-report.json"
+            "html:test-results/cucumber-report.html",
+            "json:test-results/cucumber-report.json"
         ],
         "retry": 1
     }
